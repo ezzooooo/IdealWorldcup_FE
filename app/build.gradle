@@ -2,6 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+/* 데이터 바인딩 사용 */
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
 
@@ -23,9 +26,20 @@ android {
         }
     }
 
+    /* 데이터 바인딩 사용 */
+    dataBinding {
+        enabled = true
+    }
+}
+
+/* Glide */
+repositories {
+    mavenCentral()
+    google()
 }
 
 dependencies {
+    /* 기본 디펜던시 */
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -34,4 +48,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /* Retrofit2 */
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    /* OkHttp3 */
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+
+    /* Glide */
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    // 오류 : 'annotationProcessor' dependencies won't be recognized as kapt annotation processors.
+    // Please change the configuration name to 'kapt' for these artifacts: 'com.github.bumptech.glide:compiler:4.11.0'.
+    // 오류때문에 일단 주석처리
 }
