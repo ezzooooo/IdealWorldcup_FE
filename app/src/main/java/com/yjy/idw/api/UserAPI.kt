@@ -4,7 +4,7 @@ import com.yjy.idw.data.UserVO
 import retrofit2.Call
 import retrofit2.http.*
 
-interface API {
+interface UserAPI {
     /* GET USER INFORMATION */
     @GET("users")
     fun getUserList() : Call<List<UserVO>>
