@@ -5,7 +5,6 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface API {
-
     /* GET USER INFORMATION */
     @GET("users")
     fun getUserList() : Call<List<UserVO>>
