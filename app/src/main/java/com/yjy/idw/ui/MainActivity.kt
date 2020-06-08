@@ -1,7 +1,8 @@
-package com.yjy.idw
+package com.yjy.idw.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.yjy.idw.R
 
 class MainActivity : AppCompatActivity() {
 
