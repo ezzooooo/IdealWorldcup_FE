@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IdealWorld</string>
+    <string name="WalkThroughMainText1">끌리는 피클을 고르고</string>
+    <string name="WalkThroughSubText1">다양한 카테고리의 주제들</string>
 </resources>

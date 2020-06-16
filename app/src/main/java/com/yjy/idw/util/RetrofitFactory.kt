@@ -11,7 +11,7 @@ class RetrofitFactory {
             retrofit ?: synchronized(this) {
                 Retrofit
                     .Builder()
-                    .baseUrl("URL 입력할 것")
+                    .baseUrl("http://15.164.56.5:8080/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
             }

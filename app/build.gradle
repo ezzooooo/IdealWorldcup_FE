@@ -30,6 +30,11 @@ android {
     dataBinding {
         enabled = true
     }
+
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
 }
 
 /* Glide */
@@ -55,7 +60,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
     /* OkHttp3 */
-    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+    //implementation 'com.squareup.okhttp3:okhttp:4.7.2'
 
     /* Glide */
     implementation 'com.github.bumptech.glide:glide:4.11.0'
