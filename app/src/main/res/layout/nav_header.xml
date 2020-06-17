@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/main_user_image"
+        android:background="@drawable/ic_none_user_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/main_user_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="이윤복"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWordInColorPrimary"/>
+
+    <TextView
+        android:id="@+id/main_user_tournament_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="토너먼트 갯수 25개"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWordInColorPrimary"/>
+</LinearLayout>
