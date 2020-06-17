@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_create_tournament"
+        android:title="토너먼트 만들기" />
+
+    <item
+        android:id="@+id/action_create_tournament2"
+        android:title="토너먼트 만들기"/>
+
+    <item
+        android:id="@+id/action_create_tournament3"
+        android:title="토너먼트 만들기"/>
+
+    <item
+        android:id="@+id/action_create_tournament4"
+        android:title="토너먼트 만들기"/>
+
+    <item
+        android:id="@+id/action_create_tournament5"
+        android:title="토너먼트 만들기"/>
 
 </menu>

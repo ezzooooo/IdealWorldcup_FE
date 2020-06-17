@@ -5,13 +5,15 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:fitsSystemWindows="true">
 
     <ImageView
         android:id="@+id/main_user_image"
         android:background="@drawable/ic_none_user_image"
         android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/main_user_nickname"
@@ -27,6 +29,7 @@
         android:id="@+id/main_user_tournament_cnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
         android:text="토너먼트 갯수 25개"
         android:textSize="20dp"
