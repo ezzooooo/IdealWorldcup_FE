@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.View
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_main.*
 
