@@ -44,6 +44,8 @@ repositories {
 }
 
 dependencies {
+    def nav_version = "2.3.0-beta01"
+
     /* 기본 디펜던시 */
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -57,6 +59,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    /* Navigiation */
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha07'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha07'
+    implementation "com.google.android.material:material:1.0.0"
 
     /* Retrofit2 */
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
