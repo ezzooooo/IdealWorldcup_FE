@@ -12,6 +12,7 @@ import retrofit2.Response
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
+import android.widget.SearchView
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -21,22 +22,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(main_toolbar)
+    }
 
-        val retrofit = RetrofitFactory.getRetrofit()
-
-        val userAPI = retrofit.create(UserAPI::class.java)
-
-        userAPI.getUserList().enqueue(object : Callback<List<UserVO>> {
-            override fun onFailure(call: Call<List<UserVO>>, t: Throwable) {
-                Log.d("실패", "유저리스트 가져오기 실패")
-            }
-
-            override fun onResponse(call: Call<List<UserVO>>, response: Response<List<UserVO>>) {
-                if(response.isSuccessful) {
-                    val user = response.body()
-                    Log.d("성공", user.toString())
-                }
-            }
-        })
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main_toolbar_menu, menu)
+        val searchView: SearchView = menu?.findItem(R.id.action_search)?.actionView as SearchView
+        searchView.maxWidth = Integer.MAX_VALUE
+        searchView.queryHint = "토너먼트 검색"
+        return super.onCreateOptionsMenu(menu)
     }
 }

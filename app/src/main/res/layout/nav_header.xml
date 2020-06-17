@@ -24,15 +24,4 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/colorWordInColorPrimary"/>
-
-    <TextView
-        android:id="@+id/main_user_tournament_cnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
-        android:text="토너먼트 갯수 25개"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorWordInColorPrimary"/>
 </LinearLayout>
