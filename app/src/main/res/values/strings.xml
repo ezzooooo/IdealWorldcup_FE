@@ -2,4 +2,8 @@
     <string name="app_name">이상형 월드컵</string>
     <string name="WalkThroughMainText1">끌리는 피클을 고르고</string>
     <string name="WalkThroughSubText1">다양한 카테고리의 주제들</string>
+    <string name="title_activity_walk_through">WalkThroughActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>

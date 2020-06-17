@@ -45,6 +45,9 @@ repositories {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
     def nav_version = "2.3.0-beta01"
 
     /* 기본 디펜던시 */
@@ -67,6 +70,9 @@ dependencies {
 
     /* Retrofit2 */
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    /* Viewpager2 */
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
     /* OkHttp3 */
     //implementation 'com.squareup.okhttp3:okhttp:4.7.2'
