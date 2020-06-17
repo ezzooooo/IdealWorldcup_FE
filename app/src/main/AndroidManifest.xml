@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yjy.idw">
+    package="com.yjy.idw" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,10 +11,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".ui.WalkThroughActivity"></activity>
         <activity android:name=".ui.MainActivity">
+=======
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity android:name=".ui.TournamentCreateActivity" >
+        </activity>
+        <activity android:name=".ui.MainActivity" >
+>>>>>>> cb63b7a126423c8b9f98fb947b3014f617fd3d24
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
