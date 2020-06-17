@@ -8,9 +8,12 @@ import androidx.lifecycle.ViewModelProvider
 
 class PageViewModel : ViewModel() {
 
-    private val _index = MutableLiveData<Int>()
-    val text: LiveData<String> = Transformations.map(_index) {
-        "Hello world from section: $it"
+    val _index = MutableLiveData<Int>()
+    val maintext: LiveData<String> = Transformations.map(_index) {
+        ""
+    }
+    val subtext: LiveData<String> = Transformations.map(_index) {
+        ""
     }
 
     fun setIndex(index: Int) {
