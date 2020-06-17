@@ -2,29 +2,25 @@ package com.yjy.idw.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-<<<<<<< HEAD
 import android.util.Log
-import com.yjy.idw.R
 import com.yjy.idw.api.UserAPI
 import com.yjy.idw.data.UserVO
 import com.yjy.idw.util.RetrofitFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-=======
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_main.*
->>>>>>> cb63b7a126423c8b9f98fb947b3014f617fd3d24
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-<<<<<<< HEAD
+        setSupportActionBar(main_toolbar)
 
         val retrofit = RetrofitFactory.getRetrofit()
 
@@ -42,8 +38,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-=======
-        setSupportActionBar(main_toolbar)
->>>>>>> cb63b7a126423c8b9f98fb947b3014f617fd3d24
     }
 }
