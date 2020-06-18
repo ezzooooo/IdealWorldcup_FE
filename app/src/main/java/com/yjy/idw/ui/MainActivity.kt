@@ -22,14 +22,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(main_toolbar)
+
+        main_search_iv.setOnSearchClickListener {  
+            main_application_name.visibility = View.INVISIBLE
+            main_action_menu.visibility = View.INVISIBLE
+        }
+
+        main_search_iv.setOnCloseListener {
+            main_application_name.visibility = View.VISIBLE
+            main_action_menu.visibility = View.VISIBLE
+            false
+        }
+
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.main_toolbar_menu, menu)
-        val searchView: SearchView = menu?.findItem(R.id.action_search)?.actionView as SearchView
-        searchView.maxWidth = Integer.MAX_VALUE
-        searchView.queryHint = "토너먼트 검색"
-        return super.onCreateOptionsMenu(menu)
-    }
+
 }
