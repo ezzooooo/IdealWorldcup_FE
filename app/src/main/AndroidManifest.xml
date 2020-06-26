@@ -16,7 +16,7 @@
         <activity android:name=".ui.RankingActivity"></activity>
         <activity
             android:name=".ui.main.WalkThroughActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/MyStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
