@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.yjy.idw.R
 import com.yjy.idw.ui.MainActivity
+import com.yjy.idw.ui.RankingActivity
 
 class PlaceholderFragment : Fragment() {
 
@@ -58,10 +59,10 @@ class PlaceholderFragment : Fragment() {
         val button: Button = root.findViewById(R.id.walk_through_button)
 
         /*
-        메인 액티비티가 오픈되게 해놨음
+        랭킹 액티비티가 오픈되게 해놨음
          */
         button.setOnClickListener {
-            val nextIntent = Intent(context, MainActivity::class.java)
+            val nextIntent = Intent(context, RankingActivity::class.java)
             startActivity(nextIntent)
             activity?.finish()
         }
