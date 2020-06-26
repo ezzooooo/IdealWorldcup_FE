@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ui.RankingActivity"></activity>
         <activity
             android:name=".ui.main.WalkThroughActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -23,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.TournamentCreateActivity" />
-        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>
