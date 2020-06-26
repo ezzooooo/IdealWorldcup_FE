@@ -11,4 +11,5 @@
     <string name="WalkThroughSubText3">다양한 카테고리의 주제들</string>
     <string name="WalkThroughSubText4">다양한 카테고리의 주제들</string>
     <string name="WalkThroughImageContentDescription">WalkThroughImage</string>
+    <string name="walkthrough_button">시작하기</string>
 </resources>
