@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import com.yjy.idw.R
 import com.yjy.idw.ui.main.SectionsPagerAdapter
+import me.relex.circleindicator.CircleIndicator
 
 class WalkThroughActivity : AppCompatActivity() {
 
@@ -21,5 +22,8 @@ class WalkThroughActivity : AppCompatActivity() {
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
+
+        val indicator: CircleIndicator = findViewById(R.id.indicator)
+        indicator.setViewPager(viewPager)
     }
 }
