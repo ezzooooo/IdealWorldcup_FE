@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tournament_search_first_iv"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/tournament_search_second_iv"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/tournament_search_first_iv"
+        app:layout_constraintTop_toTopOf="@+id/tournament_search_first_iv"
+        tools:background="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tournament_search_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="음식 이상형 월드컵"
+        app:layout_constraintStart_toEndOf="@+id/tournament_search_second_iv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tournament_search_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        app:layout_constraintStart_toStartOf="@+id/tournament_search_title_tv"
+        app:layout_constraintTop_toBottomOf="@id/tournament_search_title_tv" />
+
+    <TextView
+        android:id="@+id/tournament_search_writer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="yunbok"
+        app:layout_constraintStart_toEndOf="@id/tournament_search_writer"
+        app:layout_constraintTop_toTopOf="@id/tournament_search_writer"
+        />
+
+    <TextView
+        android:id="@+id/tournament_search_playcnt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:text="150,000"
+        app:layout_constraintStart_toEndOf="@id/tournament_search_writer_tv"
+        app:layout_constraintTop_toTopOf="@+id/tournament_search_writer_tv"/>
+
+    <TextView
+        android:id="@+id/tournament_search_likecnt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="4,000"
+        app:layout_constraintStart_toEndOf="@+id/tournament_search_playcnt_tv"
+        app:layout_constraintTop_toTopOf="@+id/tournament_search_playcnt_tv"/>
+
+    <TextView
+        android:id="@+id/tournament_search_datetime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="13dp"
+        android:text="2020-02-02 / 20:20:20"
+        app:layout_constraintTop_toBottomOf="@id/tournament_search_writer"
+        app:layout_constraintStart_toEndOf="@+id/tournament_search_second_iv"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
