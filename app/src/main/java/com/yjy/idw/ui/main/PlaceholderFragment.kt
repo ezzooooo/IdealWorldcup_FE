@@ -62,7 +62,7 @@ class PlaceholderFragment : Fragment() {
         랭킹 액티비티가 오픈되게 해놨음
          */
         button.setOnClickListener {
-            val nextIntent = Intent(context, RankingActivity::class.java)
+            val nextIntent = Intent(context, com.yjy.idw.ui.MainActivity::class.java)
             startActivity(nextIntent)
             activity?.finish()
         }

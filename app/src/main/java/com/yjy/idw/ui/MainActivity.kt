@@ -2,24 +2,23 @@ package com.yjy.idw.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.Log
-import android.view.Gravity
+import android.view.*
 import com.yjy.idw.api.UserAPI
 import com.yjy.idw.data.UserVO
 import com.yjy.idw.util.RetrofitFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.View
 import android.widget.SearchView
 import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,8 +43,19 @@ class MainActivity : AppCompatActivity() {
         main_action_menu.setOnClickListener {
             main_drawer_layout.openDrawer(Gravity.LEFT)
         }
-
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_create_tournament -> {
+                main_drawer_layout.closeDrawer(Gravity.LEFT)
+            }
+        }
+
+        return false
+    }
+
+
 
 
 }
