@@ -1,5 +1,6 @@
 package com.yjy.idw.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcel
@@ -13,6 +14,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.yjy.idw.R
@@ -26,6 +28,7 @@ class MainActivity() : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         // SWIPE로 메뉴 여는 행위 잠금
         main_drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+        main_navigation_view.setNavigationItemSelectedListener (this)
 
         // Search View 눌렀을 때, Tool bar에 앱 타이틀, 메뉴 버튼 제거
         main_search_iv.setOnSearchClickListener {
@@ -48,14 +51,13 @@ class MainActivity() : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_create_tournament -> {
+                Toast.makeText(this.applicationContext, "클릭하였다.",Toast.LENGTH_SHORT).show()
                 main_drawer_layout.closeDrawer(Gravity.LEFT)
+                val intent = Intent(applicationContext, TournamentCreatePopupActivity::class.java)
+                startActivity(intent)
             }
         }
 
-        return false
+        return true
     }
-
-
-
-
 }
