@@ -33,11 +33,15 @@
   <EditText
       android:id="@+id/tournament_create_title_et"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="40dp"
       android:layout_marginLeft="30dp"
       android:layout_marginRight="30dp"
+      android:layout_marginTop="10dp"
+      android:padding="10dp"
+      android:background="@drawable/button_border_line"
       android:ems="10"
       android:hint="제목을 입력하세요."
+      android:textSize="15dp"
       android:inputType="textPersonName"
       app:layout_constraintStart_toStartOf="@id/tournament_create_inform_text"
       app:layout_constraintTop_toBottomOf="@id/tournament_create_inform_text"/>
@@ -45,11 +49,15 @@
   <EditText
       android:id="@+id/tournament_create_intro_et"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="40dp"
       android:layout_marginLeft="30dp"
       android:layout_marginRight="30dp"
+      android:layout_marginTop="5dp"
+      android:padding="10dp"
+      android:background="@drawable/button_border_line"
       android:ems="10"
       android:hint="소개를 입력하세요."
+      android:textSize="15dp"
       android:inputType="textPersonName"
       app:layout_constraintStart_toStartOf="@+id/tournament_create_title_et"
       app:layout_constraintTop_toBottomOf="@+id/tournament_create_title_et" />
@@ -59,22 +67,26 @@
       android:layout_height="wrap_content"
       android:layout_marginLeft="30dp"
       android:layout_marginRight="30dp"
+      android:layout_marginTop="10dp"
       android:orientation="horizontal"
       app:layout_constraintStart_toStartOf="@+id/tournament_create_intro_et"
       app:layout_constraintTop_toBottomOf="@+id/tournament_create_intro_et">
       <Button
-            android:id="@+id/tournament_create_public_bt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="전체공개" />
+          android:id="@+id/tournament_create_public_bt"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginRight="10dp"
+          android:background="@drawable/button_border_line"
+          android:text="전체공개" />
 
       <Button
-            android:id="@+id/tournament_create_private_bt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="비공개" />
+          android:id="@+id/tournament_create_private_bt"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@drawable/button_border_line"
+          android:text="비공개" />
   </LinearLayout>
   <LinearLayout
       android:id="@+id/tournament_create_passwd_container"
@@ -82,6 +94,7 @@
       android:layout_height="wrap_content"
       android:layout_marginRight="30dp"
       android:layout_marginLeft="30dp"
+      android:layout_marginTop="8dp"
       android:weightSum="2"
       android:gravity="right"
       android:orientation="horizontal"
@@ -90,8 +103,11 @@
       <EditText
           android:id="@+id/tournament_create_passwd_et"
           android:layout_width="0dp"
-          android:layout_height="wrap_content"
+          android:layout_height="45dp"
           android:layout_weight="1"
+          android:layout_marginLeft="10dp"
+          android:padding="10dp"
+          android:background="@drawable/button_border_line"
           android:ems="10"
           android:hint="비밀번호 입력"
           android:inputType="textPassword" />
@@ -142,18 +158,21 @@
 
     <LinearLayout
         android:id="@+id/tournament_create_image_intro_container"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
       <EditText
           android:layout_width="0dp"
-          android:layout_height="wrap_content"
+          android:layout_height="40dp"
           android:layout_weight="1"
-          android:layout_marginRight="15dp"/>
+          android:layout_marginRight="15dp"
+          android:background="@drawable/button_border_line"/>
       <EditText
           android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"/>
+          android:layout_height="40dp"
+          android:layout_weight="1"
+          android:background="@drawable/button_border_line"/>
     </LinearLayout>
   </LinearLayout>
 
