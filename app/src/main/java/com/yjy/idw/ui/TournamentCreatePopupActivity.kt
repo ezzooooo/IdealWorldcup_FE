@@ -1,11 +1,13 @@
 package com.yjy.idw.ui
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.Window
 import com.yjy.idw.R
+import kotlinx.android.synthetic.main.activity_tournament_create_popup.*
 
 /*
 토너먼트 몇 강인지 선택할 수 있는 팝업 액티비티
@@ -16,6 +18,10 @@ class TournamentCreatePopupActivity : Activity() {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_tournament_create_popup)
+        tournament_create_bt.setOnClickListener {
+            val intent = Intent(this.applicationContext, TournamentCreateActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // 바깥 레이어 클릭 시 안닫히히게
