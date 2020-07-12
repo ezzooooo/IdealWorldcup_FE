@@ -18,8 +18,8 @@ import kotlinx.android.synthetic.main.activity_tournament_create_popup.*
 class TournamentCreatePopupActivity : Activity() {
 
     // 이전에 어떤 버튼이 눌러져 있었는지 알 수 있도록 선언한 배열과 변수
-    lateinit var round_list : Array<View>
-    var BeforePushButton = 0
+    private lateinit var round_list : Array<View>
+    private var BeforePushButton = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class TournamentCreatePopupActivity : Activity() {
         return true
     }
 
-    fun initializedEventListener() {
+    private fun initializedEventListener() {
         tournament_create_bt.setOnClickListener {
             val intent = Intent(this.applicationContext, TournamentCreateActivity::class.java)
             startActivity(intent)
@@ -58,7 +58,7 @@ class TournamentCreatePopupActivity : Activity() {
         }
     }
 
-    fun onTouchEventForRoundButtom(view : View) {
+    private fun onTouchEventForRoundButtom(view : View) {
         round_list[BeforePushButton].background = getDrawable(R.drawable.button_border_line)
 
         when(view.id) {

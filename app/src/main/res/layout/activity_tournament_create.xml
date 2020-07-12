@@ -77,7 +77,7 @@
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:layout_marginRight="10dp"
-          android:background="@drawable/button_border_line"
+          android:background="@drawable/push_button_border_line"
           android:text="전체공개" />
 
       <Button
@@ -107,6 +107,7 @@
           android:layout_weight="1"
           android:layout_marginLeft="10dp"
           android:padding="10dp"
+          android:visibility="invisible"
           android:background="@drawable/button_border_line"
           android:ems="10"
           android:hint="비밀번호 입력"
