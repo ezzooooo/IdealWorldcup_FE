@@ -51,13 +51,19 @@ class TournamentCreateActivity : AppCompatActivity() {
             R.id.tournament_create_public_bt -> {
                 tournament_create_passwd_et.visibility = View.INVISIBLE
                 tournament_create_private_bt.background = getDrawable(R.drawable.button_border_line)
+                tournament_create_private_bt.setTextColor(getColor(R.color.colorTextForNotPushButton))
+
                 tournament_create_public_bt.background = getDrawable(R.drawable.push_button_border_line)
+                tournament_create_public_bt.setTextColor(getColor(R.color.colorWordInColorPrimary))
             }
 
             R.id.tournament_create_private_bt -> {
                 tournament_create_public_bt.background = getDrawable(R.drawable.button_border_line)
+                tournament_create_public_bt.setTextColor(getColor(R.color.colorTextForNotPushButton))
+
                 tournament_create_passwd_et.visibility = View.VISIBLE
                 tournament_create_private_bt.background = getDrawable(R.drawable.push_button_border_line)
+                tournament_create_private_bt.setTextColor(getColor(R.color.colorWordInColorPrimary))
             }
         }
     }

@@ -44,6 +44,8 @@
             android:layout_height="120dp"
             android:text="8강"
             android:textSize="30dp"
+            android:textColor="@color/colorWordInColorPrimary"
+            android:textStyle="bold"
             android:background="@drawable/push_button_border_line"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
