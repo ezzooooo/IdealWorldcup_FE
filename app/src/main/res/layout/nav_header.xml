@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:gravity="center"
@@ -20,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="이윤복"
-        android:textSize="20dp"
+        android:text="asdf123 님 반갑습니다."
+        android:textSize="15dp"
         android:textStyle="bold"
         android:textColor="@color/colorWordInColorPrimary"/>
 </LinearLayout>
