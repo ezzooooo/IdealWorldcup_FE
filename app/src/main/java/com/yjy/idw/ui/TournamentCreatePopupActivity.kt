@@ -33,7 +33,7 @@ class TournamentCreatePopupActivity : Activity() {
     }
 
     private fun initializedEventListener() {
-        round_list = arrayOf(findViewById(R.id.tournament_create_8_bt), findViewById(R.id.tournament_create_16_bt), findViewById(R.id.tournament_create_64_bt), findViewById(R.id.tournament_create_128_bt))
+        round_list = arrayOf(findViewById(R.id.tournament_create_8_bt), findViewById(R.id.tournament_create_16_bt), findViewById(R.id.tournament_create_32_bt), findViewById(R.id.tournament_create_64_bt))
 
         tournament_create_bt.setOnClickListener {
             onTouchEventForStartButton(it)
@@ -47,11 +47,11 @@ class TournamentCreatePopupActivity : Activity() {
             onTouchEventForRoundButtom(it)
         }
 
-        tournament_create_64_bt.setOnClickListener {
+        tournament_create_32_bt.setOnClickListener {
             onTouchEventForRoundButtom(it)
         }
 
-        tournament_create_128_bt.setOnClickListener {
+        tournament_create_64_bt.setOnClickListener {
             onTouchEventForRoundButtom(it)
         }
     }
@@ -66,10 +66,10 @@ class TournamentCreatePopupActivity : Activity() {
             R.id.tournament_create_16_bt -> {
                 beforePushButton = 1
             }
-            R.id.tournament_create_64_bt -> {
+            R.id.tournament_create_32_bt -> {
                 beforePushButton = 2
             }
-            R.id.tournament_create_128_bt -> {
+            R.id.tournament_create_64_bt -> {
                 beforePushButton = 3
             }
         }
@@ -79,7 +79,7 @@ class TournamentCreatePopupActivity : Activity() {
 
     private fun onTouchEventForStartButton(view : View) {
         val intent = Intent(this.applicationContext, TournamentCreateActivity::class.java)
-        intent.putExtra("ROUND", beforePushButton)
+        intent.putExtra("ROUND", (8 * Math.pow(2.0, beforePushButton.toDouble())).toInt())
         startActivity(intent)
     }
 }

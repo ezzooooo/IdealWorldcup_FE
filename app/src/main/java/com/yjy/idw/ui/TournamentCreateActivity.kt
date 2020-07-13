@@ -1,14 +1,21 @@
 package com.yjy.idw.ui
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Layout
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.Toast
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_tournament_create.*
 
 class TournamentCreateActivity : AppCompatActivity() {
 
     private var round : Int = 8
+    private val imageContainerList : ArrayList<View> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +26,14 @@ class TournamentCreateActivity : AppCompatActivity() {
     }
 
     private fun createViewForInsertImage() {
+        val mInflater : LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val parent = findViewById<LinearLayout>(R.id.tournament_create_image_layout_container)
 
+        var cnt = round / 2
+        for(i in 1..cnt) {
+            val view = mInflater.inflate(R.layout.tournament_image_container, parent, true)
+            imageContainerList.add(view)
+        }
     }
 
     private fun initializedEventListener() {
