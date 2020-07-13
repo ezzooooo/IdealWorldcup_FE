@@ -30,7 +30,7 @@ class TournamentCreateActivity : AppCompatActivity() {
         val parent = findViewById<LinearLayout>(R.id.tournament_create_image_layout_container)
 
         var cnt = round / 2
-        for(i in 1..cnt) {
+        for(i in 0..cnt) {
             val view = mInflater.inflate(R.layout.tournament_image_container, parent, true)
             imageContainerList.add(view)
         }
