@@ -2,12 +2,10 @@ package com.yjy.idw.ui
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.Window
-import android.widget.Button
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_tournament_create_popup.*
 
@@ -19,13 +17,12 @@ class TournamentCreatePopupActivity : Activity() {
 
     // 이전에 어떤 버튼이 눌러져 있었는지 알 수 있도록 선언한 배열과 변수
     private lateinit var round_list : Array<View>
-    private var BeforePushButton = 0
+    private var beforePushButton = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_tournament_create_popup)
-        round_list = arrayOf(findViewById(R.id.tournament_create_8_bt), findViewById(R.id.tournament_create_16_bt), findViewById(R.id.tournament_create_64_bt), findViewById(R.id.tournament_create_128_bt))
         initializedEventListener()
     }
 
@@ -36,9 +33,10 @@ class TournamentCreatePopupActivity : Activity() {
     }
 
     private fun initializedEventListener() {
+        round_list = arrayOf(findViewById(R.id.tournament_create_8_bt), findViewById(R.id.tournament_create_16_bt), findViewById(R.id.tournament_create_64_bt), findViewById(R.id.tournament_create_128_bt))
+
         tournament_create_bt.setOnClickListener {
-            val intent = Intent(this.applicationContext, TournamentCreateActivity::class.java)
-            startActivity(intent)
+            onTouchEventForStartButton(it)
         }
 
         tournament_create_8_bt.setOnClickListener {
@@ -59,23 +57,29 @@ class TournamentCreatePopupActivity : Activity() {
     }
 
     private fun onTouchEventForRoundButtom(view : View) {
-        round_list[BeforePushButton].background = getDrawable(R.drawable.button_border_line)
+        round_list[beforePushButton].background = getDrawable(R.drawable.button_border_line)
 
         when(view.id) {
             R.id.tournament_create_8_bt -> {
-                BeforePushButton = 0
+                beforePushButton = 0
             }
             R.id.tournament_create_16_bt -> {
-                BeforePushButton = 1
+                beforePushButton = 1
             }
             R.id.tournament_create_64_bt -> {
-                BeforePushButton = 2
+                beforePushButton = 2
             }
             R.id.tournament_create_128_bt -> {
-                BeforePushButton = 3
+                beforePushButton = 3
             }
         }
 
-        round_list[BeforePushButton].background = getDrawable(R.drawable.push_button_border_line)
+        round_list[beforePushButton].background = getDrawable(R.drawable.push_button_border_line)
+    }
+
+    private fun onTouchEventForStartButton(view : View) {
+        val intent = Intent(this.applicationContext, TournamentCreateActivity::class.java)
+        intent.putExtra("ROUND", beforePushButton)
+        startActivity(intent)
     }
 }
