@@ -5,4 +5,6 @@
     <color name="colorAccent">#75BC00</color>
     <color name="colorWordInColorPrimary">#FFFFFF</color>
     <color name="colorTextForNotPushButton">#A6A6A6</color>
+    <color name="colorTextForNotPushRoundButton">#212121</color>
+    <color name="colorTextForCaution">#FF0000</color>
 </resources>

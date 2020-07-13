@@ -15,6 +15,8 @@
         android:layout_marginTop="30dp"
         android:text="음식 이상형 월드컵"
         android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextForNotPushRoundButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +28,7 @@
         android:layout_marginTop="5dp"
         android:textSize="12dp"
         android:text="진행하실 토너먼트 수를 선택해주세요!"
+        android:textColor="@color/colorTextForNotPushRoundButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tournament_create_category" />
@@ -57,6 +60,7 @@
             android:layout_marginLeft="5dp"
             android:text="16강"
             android:textSize="30dp"
+            android:textColor="@color/colorTextForNotPushRoundButton"
             android:background="@drawable/button_border_line"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/tournament_create_8_bt"/>
@@ -68,6 +72,7 @@
             android:layout_marginTop="5dp"
             android:text="32강"
             android:textSize="30dp"
+            android:textColor="@color/colorTextForNotPushRoundButton"
             android:background="@drawable/button_border_line"
             app:layout_constraintBaseline_toBaselineOf="@+id/tournament_create_64_bt"
             app:layout_constraintStart_toStartOf="@+id/tournament_create_8_bt" />
@@ -79,6 +84,7 @@
             android:layout_marginTop="5dp"
             android:text="64강"
             android:textSize="30dp"
+            android:textColor="@color/colorTextForNotPushRoundButton"
             android:background="@drawable/button_border_line"
             app:layout_constraintStart_toStartOf="@+id/tournament_create_16_bt"
             app:layout_constraintTop_toBottomOf="@+id/tournament_create_16_bt" />
@@ -86,15 +92,14 @@
 
     <Button
         android:id="@+id/tournament_create_bt"
-        android:layout_width="match_parent"
+        android:layout_width="240dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
         android:text="시작하기"
         android:textColor="@color/colorWordInColorPrimary"
         android:textStyle="bold"
         android:textSize="20dp"
+        android:background="@drawable/push_button_border_line"
         app:layout_constraintTop_toBottomOf="@id/tournament_round_container"
         app:layout_constraintStart_toStartOf="@+id/tournament_round_container"
         app:layout_constraintEnd_toEndOf="@+id/tournament_round_container"/>
@@ -105,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="주의사항주의사항주의사항주의사항"
+        android:textColor="@color/colorTextForCaution"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tournament_create_bt"/>

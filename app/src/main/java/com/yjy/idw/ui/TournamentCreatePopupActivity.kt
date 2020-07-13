@@ -2,10 +2,12 @@ package com.yjy.idw.ui
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.Window
+import android.widget.Button
 import com.yjy.idw.R
 import kotlinx.android.synthetic.main.activity_tournament_create_popup.*
 
@@ -16,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_tournament_create_popup.*
 class TournamentCreatePopupActivity : Activity() {
 
     // 이전에 어떤 버튼이 눌러져 있었는지 알 수 있도록 선언한 배열과 변수
-    private lateinit var round_list : Array<View>
+    private lateinit var round_list : Array<Button>
     private var beforePushButton = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +60,8 @@ class TournamentCreatePopupActivity : Activity() {
 
     private fun onTouchEventForRoundButtom(view : View) {
         round_list[beforePushButton].background = getDrawable(R.drawable.button_border_line)
+        round_list[beforePushButton].setTextColor(getColor(R.color.colorTextForNotPushRoundButton))
+        round_list[beforePushButton].typeface = Typeface.DEFAULT
 
         when(view.id) {
             R.id.tournament_create_8_bt -> {
@@ -75,6 +79,8 @@ class TournamentCreatePopupActivity : Activity() {
         }
 
         round_list[beforePushButton].background = getDrawable(R.drawable.push_button_border_line)
+        round_list[beforePushButton].setTextColor(getColor(R.color.colorWordInColorPrimary))
+        round_list[beforePushButton].typeface = Typeface.DEFAULT_BOLD
     }
 
     private fun onTouchEventForStartButton(view : View) {
