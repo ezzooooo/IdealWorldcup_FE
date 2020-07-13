@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/action_create_tournament2"
-        android:title="토너먼트 만들기"/>
+        android:title="랭킹"/>
 
     <item
         android:id="@+id/action_create_tournament3"
