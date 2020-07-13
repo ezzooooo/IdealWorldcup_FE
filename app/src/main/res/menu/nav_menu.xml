@@ -7,7 +7,6 @@
                 <item
                     android:id="@+id/action_create_tournament"
                     android:title="토너먼트 만들기" />
-
                 <item
                     android:id="@+id/action_my_create_tournament"
                     android:title="내가 만든 토너먼트"/>
@@ -21,7 +20,6 @@
                 <item
                     android:id="@+id/action_category_idol"
                     android:title="연예인 / 아이돌 월드컵"/>
-
                 <item
                     android:id="@+id/action_category_sport"
                     android:title="스포츠 월드컵"/>
