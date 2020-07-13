@@ -56,7 +56,7 @@ class MainActivity() : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 val intent = Intent(applicationContext, TournamentCreatePopupActivity::class.java)
                 startActivity(intent)
             }
-            R.id.action_create_tournament2 -> {
+            R.id.action_my_create_tournament -> {
                 Toast.makeText(this.applicationContext, "클릭하였다.",Toast.LENGTH_SHORT).show()
                 main_drawer_layout.closeDrawer(Gravity.LEFT)
                 val intent = Intent(applicationContext, RankingActivity::class.java)

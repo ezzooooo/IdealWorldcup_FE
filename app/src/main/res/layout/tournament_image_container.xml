@@ -19,7 +19,7 @@
                 android:layout_weight="1"
                 android:layout_marginRight="15dp"
                 android:padding="40dp"
-                android:src="@drawable/none_title_image" />
+                android:src="@drawable/img_01" />
 
             <ImageView
                 android:id="@+id/tournament_image02"
@@ -27,7 +27,7 @@
                 android:layout_height="150dp"
                 android:layout_weight="1"
                 android:padding="40dp"
-                android:src="@drawable/none_title_image" />
+                android:src="@drawable/img_02" />
         </LinearLayout>
 
         <LinearLayout
