@@ -1,6 +1,6 @@
 package com.yjy.idw.ui
 
-import MyAdapter
+import RankingAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,11 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.yjy.idw.R
 import com.yjy.idw.data.RankingVO
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.main_action_menu
-import kotlinx.android.synthetic.main.activity_main.main_application_name
-import kotlinx.android.synthetic.main.activity_main.main_navigation_view
-import kotlinx.android.synthetic.main.activity_main.main_search_iv
 import kotlinx.android.synthetic.main.activity_main.main_toolbar
 import kotlinx.android.synthetic.main.activity_ranking.*
 
@@ -39,25 +34,12 @@ class RankingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         ranking_drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
         ranking_navigation_view.setNavigationItemSelectedListener (this)
 
-        // Search View 눌렀을 때, Tool bar에 앱 타이틀, 메뉴 버튼 제거
-        ranking_search_iv.setOnSearchClickListener {
-            ranking_application_name.visibility = View.INVISIBLE
-            ranking_action_menu.visibility = View.INVISIBLE
-        }
-
-        // Search View 닫았을 때, Tool bar에 앱 타이틀, 메뉴 버튼 추가
-        ranking_search_iv.setOnCloseListener {
-            ranking_application_name.visibility = View.VISIBLE
-            ranking_action_menu.visibility = View.VISIBLE
-            false
-        }
-
         ranking_action_menu.setOnClickListener {
             ranking_drawer_layout.openDrawer(Gravity.LEFT)
         }
 
         viewManager = LinearLayoutManager(this)
-        viewAdapter = MyAdapter(this, rankingList)
+        viewAdapter = RankingAdapter(this, rankingList)
 
         recyclerView = findViewById<RecyclerView>(R.id.ranking_list_view).apply {
             // use this setting to improve performance if you know that changes
@@ -105,13 +87,11 @@ class RankingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_create_tournament -> {
-                Toast.makeText(this.applicationContext, "클릭하였다.", Toast.LENGTH_SHORT).show()
                 ranking_drawer_layout.closeDrawer(Gravity.LEFT)
                 val intent = Intent(applicationContext, TournamentCreatePopupActivity::class.java)
                 startActivity(intent)
             }
             R.id.action_my_create_tournament -> {
-                Toast.makeText(this.applicationContext, "클릭하였다.", Toast.LENGTH_SHORT).show()
                 ranking_drawer_layout.closeDrawer(Gravity.LEFT)
                 val intent = Intent(applicationContext, RankingActivity::class.java)
                 startActivity(intent)
