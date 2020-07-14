@@ -8,7 +8,7 @@ import com.yjy.idw.R
 import com.yjy.idw.data.RankingVO
 import kotlinx.android.synthetic.main.ranking_item.view.*
 
-class MyAdapter(val context: Context, val RankingList: ArrayList<RankingVO>) : RecyclerView.Adapter<MyAdapter.Holder>() {
+class RankingAdapter(val context: Context, val RankingList: ArrayList<RankingVO>) : RecyclerView.Adapter<RankingAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.ranking_item, parent, false)
 
