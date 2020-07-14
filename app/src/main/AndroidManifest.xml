@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.TournamentCreatePopupActivity" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name=".ui.main.ResultActivity"></activity>
+        <activity
+            android:name=".ui.TournamentCreatePopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".ui.RankingActivity" />
         <activity
             android:name=".ui.main.WalkThroughActivity"

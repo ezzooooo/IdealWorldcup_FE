@@ -13,4 +13,5 @@
     <string name="WalkThroughImageContentDescription">WalkThroughImage</string>
     <string name="walkthrough_button">시작하기</string>
     <string name="ranking">랭킹</string>
+    <string name="result">이상형 월드컵 결과</string>
 </resources>
